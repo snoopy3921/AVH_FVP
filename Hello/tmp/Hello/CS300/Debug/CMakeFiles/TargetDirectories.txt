@@ -1,0 +1,4 @@
+/home/arm_mlops_docker/workspace/Hello/tmp/Hello/CS300/Debug/CMakeFiles/database.dir
+/home/arm_mlops_docker/workspace/Hello/tmp/Hello/CS300/Debug/CMakeFiles/Hello.dir
+/home/arm_mlops_docker/workspace/Hello/tmp/Hello/CS300/Debug/CMakeFiles/edit_cache.dir
+/home/arm_mlops_docker/workspace/Hello/tmp/Hello/CS300/Debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/arm_mlops_docker/workspace/Hello/tmp/Hello/CS300/Release/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

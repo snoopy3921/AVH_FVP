@@ -1,0 +1,218 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake:200 (message)"
+      - "CMakeLists.txt:92 (project)"
+    message: |
+      The target system is: Generic -  - 
+      The host system is: Linux - 6.10.14-linuxkit - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:1271 (message)"
+      - "/home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeDetermineASMCompiler.cmake:139 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:92 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (Arm GNU Toolchain 12.3.Rel1 (Build arm-12.35)) 12.3.1 20230626
+      Copyright (C) 2022 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:92 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld: /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/libc.a(libc_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x28): undefined reference to `_exit'
+      /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld: /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/libc.a(libc_a-writer.o): in function `_write_r':
+      writer.c:(.text._write_r+0x24): undefined reference to `_write'
+      /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld: /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/libc.a(libc_a-closer.o): in function `_close_r':
+      closer.c:(.text._close_r+0x18): undefined reference to `_close'
+      /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld: /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      lseekr.c:(.text._lseek_r+0x24): undefined reference to `_lseek'
+      /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld: /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/libc.a(libc_a-readr.o): in function `_read_r':
+      readr.c:(.text._read_r+0x24): undefined reference to `_read'
+      /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld: /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+      sbrkr.c:(.text._sbrk_r+0x18): undefined reference to `_sbrk'
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:92 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /home/arm_mlops_docker/workspace/Hello/tmp/Hello/CS300/Debug/CMakeFiles/4.0.2/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:92 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/arm_mlops_docker/workspace/Hello/tmp/Hello/CS300/Debug/CMakeFiles/CMakeScratch/TryCompile-AZiI7i"
+      binary: "/home/arm_mlops_docker/workspace/Hello/tmp/Hello/CS300/Debug/CMakeFiles/CMakeScratch/TryCompile-AZiI7i"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/arm_mlops_docker/cmsis-toolbox-linux-amd64/etc/CMakeASM"
+      CMAKE_WARN_DEPRECATED: "FALSE"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/arm_mlops_docker/workspace/Hello/tmp/Hello/CS300/Debug/CMakeFiles/CMakeScratch/TryCompile-AZiI7i'
+        
+        Run Build Command(s): /home/arm_mlops_docker/ninja/ninja -v cmTC_3fe3f
+        [1/2] /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -v -o CMakeFiles/cmTC_3fe3f.dir/CMakeCCompilerABI.c.obj -c /home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc
+        Target: arm-none-eabi
+        Configured with: /data/jenkins/workspace/GNU-toolchain/arm-12/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-12/build-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-12/build-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-12/build-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-12/build-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-12/build-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-gnu-ld --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-12/build-arm-none-eabi/install/arm-none-eabi --with-multilib-list=aprofile,rmprofile --with-pkgversion='Arm GNU Toolchain 12.3.Rel1 (Build arm-12.35)' --with-bugurl=https://bugs.linaro.org/
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 12.3.1 20230626 (Arm GNU Toolchain 12.3.Rel1 (Build arm-12.35)) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3fe3f.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_3fe3f.dir/'
+         /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/12.3.1/cc1 -quiet -v -iprefix /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/ -isysroot /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ /home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_3fe3f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o /tmp/ccCQzOgt.s
+        GNU C17 (Arm GNU Toolchain 12.3.Rel1 (Build arm-12.35)) version 12.3.1 20230626 (arm-none-eabi)
+        	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44), GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/12.3.1/include"
+        ignoring nonexistent directory "/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/usr/local/include"
+        ignoring duplicate directory "/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/12.3.1/include-fixed"
+        ignoring duplicate directory "/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include"
+        ignoring nonexistent directory "/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/include
+         /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/include-fixed
+         /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include
+        End of search list.
+        GNU C17 (Arm GNU Toolchain 12.3.Rel1 (Build arm-12.35)) version 12.3.1 20230626 (arm-none-eabi)
+        	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44), GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 438b582e669a48ce1020c90eb318abec
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3fe3f.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_3fe3f.dir/'
+         /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/as -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_3fe3f.dir/CMakeCCompilerABI.c.obj /tmp/ccCQzOgt.s
+        GNU assembler version 2.40.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 12.3.Rel1 (Build arm-12.35)) 2.40.0.20230627
+        COMPILER_PATH=/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/12.3.1/:/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/:/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/:/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/:/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/:/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3fe3f.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_3fe3f.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /home/arm_mlops_docker/cmake/bin/cmake -E rm -f libcmTC_3fe3f.a && /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-ar qc libcmTC_3fe3f.a  CMakeFiles/cmTC_3fe3f.dir/CMakeCCompilerABI.c.obj && /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-ranlib libcmTC_3fe3f.a && :
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:191 (message)"
+      - "/home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:92 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/include]
+          add: [/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/include-fixed]
+          add: [/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/include] ==> [/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.3.1/include]
+        collapse include dir [/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/include-fixed] ==> [/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.3.1/include-fixed]
+        collapse include dir [/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include] ==> [/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include]
+        implicit include dirs: [/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.3.1/include;/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/12.3.1/include-fixed;/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "/home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:92 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/home/arm_mlops_docker/workspace/Hello/tmp/Hello/CS300/Debug/CMakeFiles/CMakeScratch/TryCompile-AZiI7i']
+        ignore line: []
+        ignore line: [Run Build Command(s): /home/arm_mlops_docker/ninja/ninja -v cmTC_3fe3f]
+        ignore line: [[1/2] /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -v -o CMakeFiles/cmTC_3fe3f.dir/CMakeCCompilerABI.c.obj -c /home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: /data/jenkins/workspace/GNU-toolchain/arm-12/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-12/build-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-12/build-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-12/build-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-12/build-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-12/build-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-gnu-ld --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-12/build-arm-none-eabi/install/arm-none-eabi --with-multilib-list=aprofile,rmprofile --with-pkgversion='Arm GNU Toolchain 12.3.Rel1 (Build arm-12.35)' --with-bugurl=https://bugs.linaro.org/]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.3.1 20230626 (Arm GNU Toolchain 12.3.Rel1 (Build arm-12.35)) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3fe3f.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_3fe3f.dir/']
+        ignore line: [ /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/12.3.1/cc1 -quiet -v -iprefix /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/ -isysroot /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ /home/arm_mlops_docker/cmake/share/cmake-4.0/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_3fe3f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o /tmp/ccCQzOgt.s]
+        ignore line: [GNU C17 (Arm GNU Toolchain 12.3.Rel1 (Build arm-12.35)) version 12.3.1 20230626 (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44)  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/12.3.1/include"]
+        ignore line: [ignoring nonexistent directory "/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/12.3.1/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include"]
+        ignore line: [ignoring nonexistent directory "/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/usr/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/include]
+        ignore line: [ /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/include-fixed]
+        ignore line: [ /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (Arm GNU Toolchain 12.3.Rel1 (Build arm-12.35)) version 12.3.1 20230626 (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44)  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 438b582e669a48ce1020c90eb318abec]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3fe3f.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_3fe3f.dir/']
+        ignore line: [ /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/as -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_3fe3f.dir/CMakeCCompilerABI.c.obj /tmp/ccCQzOgt.s]
+        ignore line: [GNU assembler version 2.40.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 12.3.Rel1 (Build arm-12.35)) 2.40.0.20230627]
+        ignore line: [COMPILER_PATH=/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/12.3.1/:/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/:/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/:/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/:/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/:/home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3fe3f.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_3fe3f.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /home/arm_mlops_docker/cmake/bin/cmake -E rm -f libcmTC_3fe3f.a && /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-ar qc libcmTC_3fe3f.a  CMakeFiles/cmTC_3fe3f.dir/CMakeCCompilerABI.c.obj && /home/arm_mlops_docker/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-ranlib libcmTC_3fe3f.a && :]
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+...

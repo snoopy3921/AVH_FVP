@@ -1,0 +1,252 @@
+build:
+  generated-by: csolution version 2.1.0
+  solution: Hello.csolution.yml
+  project: Hello.cproject.yml
+  context: Hello.Release+CS300
+  compiler: GCC
+  device: ARM::SSE-300-MPS3
+  processor:
+    fpu: on
+  packs:
+    - pack: ARM::CMSIS-Compiler@2.1.0
+      path: ${CMSIS_PACK_ROOT}/ARM/CMSIS-Compiler/2.1.0
+    - pack: ARM::CMSIS-RTX@5.9.0
+      path: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0
+    - pack: ARM::CMSIS@6.1.0
+      path: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0
+    - pack: ARM::V2M_MPS3_SSE_300_BSP@1.5.0
+      path: ${CMSIS_PACK_ROOT}/ARM/V2M_MPS3_SSE_300_BSP/1.5.0
+  optimize: balanced
+  debug: off
+  misc:
+    C:
+      - -std=gnu11
+      - -masm-syntax-unified
+      - -fomit-frame-pointer
+      - -ffunction-sections
+      - -fdata-sections
+    CPP:
+      - -masm-syntax-unified
+      - -fomit-frame-pointer
+      - -ffunction-sections
+      - -fdata-sections
+    Link:
+      - --specs=nano.specs
+      - --specs=nosys.specs
+      - -Wl,-print-memory-usage
+      - -Wl,--gc-sections
+      - -Wl,--no-warn-rwx-segments
+  define:
+    - _RTE_
+  add-path:
+    - RTE/CMSIS
+    - RTE/Device/SSE-300-MPS3
+    - RTE/_Release_CS300
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS-Compiler/2.1.0/include
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Include
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Core/Include
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/Driver/Include
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include
+    - ${CMSIS_PACK_ROOT}/ARM/V2M_MPS3_SSE_300_BSP/1.5.0/Board/Device_Definition
+    - ${CMSIS_PACK_ROOT}/ARM/V2M_MPS3_SSE_300_BSP/1.5.0/Board/Platform
+    - ${CMSIS_PACK_ROOT}/ARM/V2M_MPS3_SSE_300_BSP/1.5.0/CMSIS_Driver
+    - ${CMSIS_PACK_ROOT}/ARM/V2M_MPS3_SSE_300_BSP/1.5.0/CMSIS_Driver/Config
+    - ${CMSIS_PACK_ROOT}/ARM/V2M_MPS3_SSE_300_BSP/1.5.0/Device/Include
+  output-dirs:
+    intdir: tmp/Hello/CS300/Release
+    outdir: out/Hello/CS300/Release
+    rtedir: RTE
+  output:
+    - type: elf
+      file: Hello.elf
+    - type: hex
+      file: Hello.hex
+  components:
+    - component: ARM::CMSIS Driver:USART@1.0.0
+      condition: SSE-300-MPS3 USART
+      from-pack: ARM::V2M_MPS3_SSE_300_BSP@1.5.0
+      selected-by: CMSIS Driver:USART
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/V2M_MPS3_SSE_300_BSP/1.5.0/CMSIS_Driver/Driver_USART.c
+          category: source
+    - component: ARM::CMSIS-Compiler:CORE@1.1.0
+      condition: GCC CortexDevice
+      from-pack: ARM::CMSIS-Compiler@2.1.0
+      selected-by: CMSIS-Compiler:CORE
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-Compiler/2.1.0/source/gcc/retarget_syscalls.c
+          category: sourceC
+    - component: ARM::CMSIS-Compiler:STDIN:Custom@1.1.0
+      condition: CORE
+      from-pack: ARM::CMSIS-Compiler@2.1.0
+      selected-by: CMSIS-Compiler:STDIN:Custom
+    - component: ARM::CMSIS-Compiler:STDOUT:Custom@1.1.0
+      condition: CORE
+      from-pack: ARM::CMSIS-Compiler@2.1.0
+      selected-by: CMSIS-Compiler:STDOUT:Custom
+    - component: ARM::CMSIS:CORE@6.1.0
+      condition: ARMv6_7_8-M Device
+      from-pack: ARM::CMSIS@6.1.0
+      selected-by: CMSIS:CORE
+    - component: ARM::CMSIS:OS Tick:SysTick@1.0.5
+      condition: OS Tick SysTick
+      from-pack: ARM::CMSIS@6.1.0
+      selected-by: CMSIS:OS Tick:SysTick
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Source/os_systick.c
+          category: sourceC
+    - component: ARM::CMSIS:RTOS2:Keil RTX5&Source@5.9.0
+      condition: RTX5
+      from-pack: ARM::CMSIS-RTX@5.9.0
+      selected-by: CMSIS:RTOS2:Keil RTX5&Source
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/GCC/irq_armv8mml.S
+          category: source
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_delay.c
+          category: source
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_evflags.c
+          category: source
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_evr.c
+          category: source
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_kernel.c
+          category: source
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_lib.c
+          category: source
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_memory.c
+          category: source
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_mempool.c
+          category: source
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_msgqueue.c
+          category: source
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_mutex.c
+          category: source
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_semaphore.c
+          category: source
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_system.c
+          category: source
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_thread.c
+          category: source
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS-RTX/5.9.0/Source/rtx_timer.c
+          category: source
+        - file: RTE/CMSIS/RTX_Config.c
+          category: source
+          attr: config
+          version: 5.2.0
+        - file: RTE/CMSIS/RTX_Config.h
+          category: header
+          attr: config
+          version: 5.6.0
+    - component: ARM::Device:Definition@2.0.0
+      condition: SSE-300-MPS3 Device
+      from-pack: ARM::V2M_MPS3_SSE_300_BSP@1.5.0
+      selected-by: Device:Definition
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/V2M_MPS3_SSE_300_BSP/1.5.0/Board/Device_Definition/device_definition.c
+          category: source
+        - file: RTE/Device/SSE-300-MPS3/device_cfg.h
+          category: header
+          attr: config
+          version: 1.1.4
+    - component: ARM::Device:Native Driver:IO@1.1.0
+      condition: SSE-300-MPS3 Device
+      from-pack: ARM::V2M_MPS3_SSE_300_BSP@1.5.0
+      selected-by: Device:Native Driver:IO
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/V2M_MPS3_SSE_300_BSP/1.5.0/Device/Source/arm_mps3_io_drv.c
+          category: source
+    - component: ARM::Device:Native Driver:SysCounter@1.1.0
+      condition: SSE-300-MPS3 Device
+      from-pack: ARM::V2M_MPS3_SSE_300_BSP@1.5.0
+      selected-by: Device:Native Driver:SysCounter
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/V2M_MPS3_SSE_300_BSP/1.5.0/Device/Source/syscounter_armv8-m_cntrl_drv.c
+          category: source
+        - file: ${CMSIS_PACK_ROOT}/ARM/V2M_MPS3_SSE_300_BSP/1.5.0/Device/Source/syscounter_armv8-m_read_drv.c
+          category: source
+    - component: ARM::Device:Native Driver:SysTimer@1.1.0
+      condition: SSE-300-MPS3 Device
+      from-pack: ARM::V2M_MPS3_SSE_300_BSP@1.5.0
+      selected-by: Device:Native Driver:SysTimer
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/V2M_MPS3_SSE_300_BSP/1.5.0/Device/Source/systimer_armv8-m_drv.c
+          category: source
+    - component: ARM::Device:Native Driver:Timeout@1.0.0
+      condition: SSE-300-MPS3 Systimer Syscounter
+      from-pack: ARM::V2M_MPS3_SSE_300_BSP@1.5.0
+      selected-by: Device:Native Driver:Timeout
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/V2M_MPS3_SSE_300_BSP/1.5.0/Device/Source/systimer_armv8-m_timeout.c
+          category: source
+    - component: ARM::Device:Native Driver:UART@1.1.0
+      condition: SSE-300-MPS3 Device
+      from-pack: ARM::V2M_MPS3_SSE_300_BSP@1.5.0
+      selected-by: Device:Native Driver:UART
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/V2M_MPS3_SSE_300_BSP/1.5.0/Device/Source/uart_cmsdk_drv.c
+          category: source
+    - component: ARM::Device:Startup&C Startup@2.0.0
+      condition: SSE-300-MPS3 Device
+      from-pack: ARM::V2M_MPS3_SSE_300_BSP@1.5.0
+      selected-by: Device:Startup&C Startup
+      files:
+        - file: RTE/Device/SSE-300-MPS3/startup_SSE300MPS3.c
+          category: source
+          attr: config
+          version: 1.1.1
+        - file: RTE/Device/SSE-300-MPS3/system_SSE300MPS3.c
+          category: source
+          attr: config
+          version: 1.1.1
+  linker:
+    script: ${CMSIS_COMPILER_ROOT}/gcc_linker_script.ld
+    regions: RTE/Device/SSE_300_MPS3/regions_SSE_300_MPS3.h
+  groups:
+    - group: Documentation
+      files:
+        - file: ./README.md
+          category: doc
+    - group: Main
+      files:
+        - file: ./main.c
+          category: sourceC
+    - group: App
+      files:
+        - file: ./hello.c
+          category: sourceC
+    - group: Board IO
+      files:
+        - file: ./Board_IO/retarget_stdio.c
+          category: sourceC
+  constructed-files:
+    - file: RTE/_Release_CS300/RTE_Components.h
+      category: header
+  licenses:
+    - license: <unknown>
+      packs:
+        - pack: ARM::V2M_MPS3_SSE_300_BSP@1.5.0
+      components:
+        - component: ARM::CMSIS Driver:USART@1.0.0
+        - component: ARM::Device:Definition@2.0.0
+        - component: ARM::Device:Native Driver:IO@1.1.0
+        - component: ARM::Device:Native Driver:SysCounter@1.1.0
+        - component: ARM::Device:Native Driver:SysTimer@1.1.0
+        - component: ARM::Device:Native Driver:Timeout@1.0.0
+        - component: ARM::Device:Native Driver:UART@1.1.0
+        - component: ARM::Device:Startup&C Startup@2.0.0
+    - license: Apache-2.0
+      packs:
+        - pack: ARM::CMSIS-Compiler@2.1.0
+        - pack: ARM::CMSIS-RTX@5.9.0
+        - pack: ARM::CMSIS@6.1.0
+      components:
+        - component: ::CMSIS Driver:USART(API)
+        - component: ::CMSIS-Compiler:STDIN(API)
+        - component: ::CMSIS-Compiler:STDOUT(API)
+        - component: ::CMSIS:OS Tick(API)
+        - component: ::CMSIS:RTOS2(API)
+        - component: ARM::CMSIS-Compiler:CORE@1.1.0
+        - component: ARM::CMSIS-Compiler:STDIN:Custom@1.1.0
+        - component: ARM::CMSIS-Compiler:STDOUT:Custom@1.1.0
+        - component: ARM::CMSIS:CORE@6.1.0
+        - component: ARM::CMSIS:OS Tick:SysTick@1.0.5
+        - component: ARM::CMSIS:RTOS2:Keil RTX5&Source@5.9.0

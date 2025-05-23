@@ -1,0 +1,13 @@
+build-idx:
+  generated-by: csolution version 2.1.0
+  cdefault: cdefault.yml
+  csolution: Hello.csolution.yml
+  cprojects:
+    - cproject: Hello.cproject.yml
+  cbuilds:
+    - cbuild: Hello.Debug+CS300.cbuild.yml
+      project: Hello
+      configuration: .Debug+CS300
+    - cbuild: Hello.Release+CS300.cbuild.yml
+      project: Hello
+      configuration: .Release+CS300

@@ -1,0 +1,62 @@
+Using Keil MDK online: ⬅️
+	https://studio.keil.arm.com/
+
+
+This link guides how to create AVH_FVPs on Desktop: ⬅️
+	https://arm-software.github.io/AVH/main/infrastructure/html/run_mdk_vscode.html
+	
+	https://arm-software.github.io/AVH/main/infrastructure/html/index.html - Overal has 4 methods
+
+Open it and read documentation about Keil MDK (Development Kit): ⬅️
+	https://developer.arm.com/documentation/109350/v6/
+
+file:///home/giahuy/Pictures/Screenshots/Screenshot%20from%202025-05-19%2015-21-18.png ⬅️
+
+Download locally AVH_FVPs  ⬅️
+	https://arm-software.github.io/AVH/main/infrastructure/html/avh_fvp_artifactory.html#avh_fvp_download
+	
+Read this, it has talked about Docker (The AVH MLOps example shows how to build a docker container with the tools. ) ⬅️
+	https://www.keil.arm.com/artifacts/ 
+	
+Pull docker image: ⬅️
+	docker pull ghcr.io/arm-software/avh-mlops/arm-mlops-docker-licensed-community:latest
+	
+	and then run: ⬅️
+	docker run -d \
+	--name local_arm_mlops_container \
+	-u root \
+	-v $(readlink -f ../):/workspace \
+	--platform=linux/amd64 \
+	ghcr.io/arm-software/avh-mlops/arm-mlops-docker-licensed-community:latest \
+	sleep infinity
+	
+Or build docker image from this: ⬅️
+	https://github.com/ARM-software/AVH-MLOps - Clone this, navigate to docker_base, build image
+	
+	Then run built image: ⬅️	
+	docker build -t avh_fvp_base_img:latest . 
+	
+	And run: ⬅️
+	docker run -d \
+	--name avh_fvp_base_img \
+	-u root \
+	-v $(readlink -f ../):/workspace \
+	--platform=linux/amd64 \
+	avh_fvp_base_img:latest \
+	sleep infinity
+	
+	Test if the Arm Compiler can be executed and displays your license: ⬅️
+	docker exec local_arm_mlops_container su -l arm_mlops_docker -c "/home/arm_mlops_docker/ArmCompilerforEmbedded6.20/bin/armclang --version"
+
+	
+	
+	Test if a Arm Virtual Hardware FVP can be executed: ⬅️
+	docker exec avh_fvp_base_img su -l arm_mlops_docker -c "/home/arm_mlops_docker/avh-fvp-11.22.39/avh-linux-x86/bin/FVP_MPS2_Cortex-M33 --version"
+
+	
+	
+	
+	
+	
+	
+	
