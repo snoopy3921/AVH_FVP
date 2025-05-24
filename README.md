@@ -1,4 +1,4 @@
-Download and extract all file from this [link](https://www.dropbox.com/scl/fo/585uxv64impvhwzo2lc1v/AB-6F2ezTrPUFsbaX1HvUGw?rlkey=ijy1b9tlkn485y57l3y93v7n5&st=m70tvwb6&dl=0) to ``downloads`` folder
+Download all file from this [link](https://www.dropbox.com/scl/fo/585uxv64impvhwzo2lc1v/AB-6F2ezTrPUFsbaX1HvUGw?rlkey=ijy1b9tlkn485y57l3y93v7n5&st=m70tvwb6&dl=0) to ``downloads`` folder
 
 
 
