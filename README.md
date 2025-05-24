@@ -38,3 +38,7 @@ After these steps, file ./Hello/out/Hello/CS300/Release/Hello.elf will be apeare
 ```
 
 ![alt text](<Screenshot from 2025-05-24 03-39-19.png>)
+
+Result demo a Hello program
+
+![alt text](<Screenshot from 2025-05-24 03-41-01.png>)
